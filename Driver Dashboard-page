@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+<style>
+    /* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.dashboard-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Section Headings */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Driver Details */
+.driver-details p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f3f3f3;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    color: #555;
+}
+
+/* Active Rides Table Styles */
+.active-rides td:last-child {
+    font-weight: bold;
+    color: #4CAF50; /* Green color for "In Progress" status */
+}
+
+/* Ride History Table Styles */
+.ride-history td:last-child {
+    color: #888;
+}
+.track{
+    position: relative;
+  left:350px;
+  display: inline-block; 
+  padding: 10px 50px;
+  margin: 10px;
+  width: 25%;
+  color: #160505;
+  cursor: pointer;
+  font-size: 24px;
+  text-decoration: none; 
+  text-align: center; 
+  background: green;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.track:hover{
+    background-color:red ;
+}
+
+</style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Driver Details Section -->
+        <section class="driver-details">
+            <h2>Driver Details</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Phone Number:</strong> +1-234-567-8901</p>
+            <p><strong>Vehicle Type:</strong> Sedan</p>
+            <p><strong>Vehicle Model:</strong> Toyota Camry</p>
+            <p><strong>License Plate:</strong> ABC123456</p>
+        </section>
+
+        <!-- Active Rides Section -->
+        <section class="active-rides">
+            <h2>Active Rides</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ride ID</th>
+                        <th>Source - Destination</th>
+                        <th>Passenger Name</th>
+                        <th>Fare</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Hyderabad - Warangal</td>
+                        <td>Mr. Ramesh Raju</td>
+                        <td>₹500</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Warangal - Vijayawada</td>
+                        <td>Ms. Anjali Gupta</td>
+                        <td>₹300</td>
+                        <td>In Progress</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Ride History Section -->
+        <section class="ride-history">
+            <h2>Ride History (Completed Rides)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ride ID</th>
+                        <th>Source - Destination</th>
+                        <th>Passenger Name</th>
+                        <th>Fare</th>
+                        <th>Completion Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0001</td>
+                        <td>Hyderabad - Vijayawada</td>
+                        <td>Mr. Rakesh Singh</td>
+                        <td>₹700</td>
+                        <td>11:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>0002</td>
+                        <td>Vijayawada - Vishakhapatnam</td>
+                        <td>Ms. Priya Nair</td>
+                        <td>₹800</td>
+                        <td>2:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <a href="trackride.html" class="track">Track a ride</a>
+    </div>
+</body>
+</html>
