@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="upper">
+        <marquee behavior="scroll" direction="left" scrollamount="7">
+            <h2>Avaliable cars</h2>
+            <img src="https://quickride.in/quickRideHomeLandingPage/taxiAssets/yeellowTaxiImage/yellowHatchbackTaxi.png" alt="Image 1" width="200">
+            <img src="https://quickride.in/quickRideHomeLandingPage/taxiAssets/yeellowTaxiImage/yellowSedanTaxi.png" alt="Image 2" width="200">
+            <img src="https://quickride.in/quickRideHomeLandingPage/taxiAssets/yeellowTaxiImage/yellowSuvTaxi.png" alt="Image 3" width="200">
+            <img src="https://quickride.in/quickRideHomeLandingPage/taxiAssets/yeellowTaxiImage/yellowSuvElectric.png" alt="Image 4" width="200">
+            <img src="https://quickride.in/quickRideHomeLandingPage/taxiAssets/yeellowTaxiImage/yellowSedanElectricTataTaxi.png" alt="Image 5" width="200">
+            <img src="https://quickride.in/quickRideHomeLandingPage/taxiAssets/yeellowTaxiImage/yellowSuvLuxury.png" alt="Image 6" width="200">
+          </marquee>
+    
+          
+        <div class="middle">
+        <div class="nav">
+        
+        <div class="controls">
+            <h1 style="text-align: center; color:#0b0b0b;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Book a Ride</h1>
+            <div class="input-group">
+                <img class="point-1" src="https://quickride.in/taxidriver/images/ic_gps_location.svg" alt="Start" /><br>
+                <input id="start" type="text" placeholder="Source" required>
+            </div>
+            <div class="input-group">
+                <img  class="point-2" src="https://res.cloudinary.com/dvclemhqg/image/upload/v1726767812/mhvlfrtximsot4oh4vnh.jpg" alt="Drop-off" />
+                <input id="end" type="text" placeholder="Destination" required><br>
+            </div>
+            <input id="date" type="date" placeholder="Date" required><br><br>
+            <input id="time" type="time" placeholder="Time" required><br><br>
+            <a href="confirmbooking.html" class="butt bok">confirm</a>
+        </div>
+    </body>
+                </div>
+                </div>
+                </div>
+
+
+            
+            
+            
+            
+        </div>
