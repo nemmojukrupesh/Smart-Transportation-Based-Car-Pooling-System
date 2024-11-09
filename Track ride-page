@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Ride</title>
+<style>
+    /* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.track-ride-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Section Headings */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Map Section */
+.map-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tracking Ride Section */
+.tracking-ride {
+    display: flex;
+    flex-direction: column;
+}
+
+.ride-progress {
+    list-style-type: none;
+}
+
+.ride-progress li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.location-info h3 {
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.location-info p {
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+/* Completed and Upcoming Indicators */
+.completed {
+    background-color: #e0ffe0;
+    border-left: 4px solid #4CAF50;
+}
+
+.upcoming {
+    background-color: #fff3e0;
+    border-left: 4px solid #FFA726;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cancel-ride, .back-dashboard {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cancel Ride Button */
+.cancel-ride {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.cancel-ride:hover {
+    background-color: #d32f2f;
+}
+
+/* Back to Dashboard Button */
+.back-dashboard {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.back-dashboard:hover {
+    background-color: #1976D2;
+}
+
+</style>
+</head>
+<body>
+    <div class="track-ride-container">
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2>Find Your Ride on the Map</h2>
+            <img src="https://via.placeholder.com/800x400?text=Google+Map+-+Source+to+Destination" alt="Map showing source and destination">
+        </section>
+
+        <!-- Tracking Ride Section -->
+        <section class="tracking-ride">
+            <h2>Tracking Ride</h2>
+            <ul class="ride-progress">
+                <li class="completed">
+                    <div class="location-info">
+                        <h3>Hyderabad (Starting Point)</h3>
+                        <p><strong>Time:</strong> 9:00 AM</p>
+                        <p><strong>Passenger:</strong> Mr. Ramesh Raju</p>
+                        <p><strong>Fare:</strong> ₹500</p>
+                    </div>
+                </li>
+                <li class="completed">
+                    <div class="location-info">
+                        <h3>Location 1 - Warangal</h3>
+                        <p><strong>Time:</strong> 11:00 AM</p>
+                        <p><strong>Passenger:</strong> Ms. Anjali Gupta</p>
+                        <p><strong>Fare:</strong> ₹200</p>
+                    </div>
+                </li>
+                <li class="upcoming">
+                    <div class="location-info">
+                        <h3>Location 2 - Vijayawada</h3>
+                        <p><strong>Passenger:</strong> Mr. Rajiv Kumar</p>
+                        <p><strong>Fare:</strong> ₹300</p>
+                    </div>
+                </li>
+                <li class="upcoming">
+                    <div class="location-info">
+                        <h3>Location 3 - Vishakhapatnam (Destination)</h3>
+                        <p><strong>Passenger:</strong> Ms. Priya Nair</p>
+                        <p><strong>Fare:</strong> ₹400</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Action Buttons Section -->
+        <div class="action-buttons">
+            <button class="cancel-ride">Cancel Ride</button>
+            <button class="back-dashboard">Back to Dashboard</button>
+        </div>
+    </div>
+</body>
+</html>
