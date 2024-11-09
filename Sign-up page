@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpooling Signup</title>
+<style>
+    body {
+  font-family: "Times New Roman", serif;
+  background: linear-gradient(135deg, rgba(58, 141, 255, 0.8), rgba(0, 201, 167, 0.8)),
+      url('https://i0.wp.com/upride.co.in/wp-content/uploads/2023/10/image-278.png?resize=750%2C450&ssl=1') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.main-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 900px;
+}
+.signup-container {
+  position: relative;
+  left:0px;
+  background-color: #1a1a2e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 45%;
+  text-align: center;
+}
+.signup-container h2 {
+  font-size: 1.8em;
+  color: #00c9a7;
+  margin-bottom: 15px;
+}
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"],
+.signup-container input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.butt {
+  display: inline-block; 
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none; 
+  text-align: center; 
+}
+.explor {
+background-color: #007bff;
+}
+.signup-container .signup-button {
+  background-color: blue;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.signup-container .signup-button:hover {
+  background-color: #0056b3;
+}
+.signup-container .login-link {
+  margin-top: 10px;
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.signup-container .login-link:hover {
+  color: #00c9a7;
+}
+.proceed-button {
+  background-color: green;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+.proceed-button:hover {
+  background-color: #009e73;
+}
+
+</style>
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="signup-container">
+            <h2>Create a Customer Account</h2>
+            <form>
+                <input type="text" placeholder="Customer Username" required>
+                <input type="email" placeholder="Email ID" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
+            <a href="login.html" class="login-link">Already have an account? Login here</a>
+        </div>
+        <div class="signup-container">
+            <h2>Create a Driver Account</h2>
+            <form>
+                <input type="text" placeholder="Driver Username" required>
+                <input type="email" placeholder="Email ID" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
+            <a href="login.html" class="login-link">Already have an account? Login here</a>
+        </div>
+    </div>
+    <a href="booking.html" class="butt explor">Proceed</a>
+
+</body>
+</html>
