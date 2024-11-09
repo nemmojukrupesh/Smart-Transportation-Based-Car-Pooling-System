@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<body>
+<div class="cover">
+        <div class="cover-logo">
+            <img class="heading" src="https://res.cloudinary.com/dvclemhqg/image/upload/v1726649394/g2ij1wzach04ve1rxwwz.png">
+        </div>
+<div class="login">
+            <img  class="cover-in" src="https://res.cloudinary.com/dvclemhqg/image/upload/v1727117786/wcjgtfe8hulbvjqtxlo8.jpg">
+            <h1 style="text-align: center; color: #ff5733;">Book a Ride</h1>
+            <div style="text-align: center;">
+            <a href="#" class="button explore">Explore Services</a>
+            <a href="interface.html" class="button book">Book Services</a>
+            <footer>
+                <h4>© 2024 Carpooling Service</h4>
+                    <h4>Your go-to platform for reliable and eco-friendly carpooling.</h4>
+                    <a class="foot" href="#"> Contact Us | Privacy Policy | Terms & Conditions</a><br><br>
+                    
+                    
+                <a class="foot" href="#">Follow us on
+                    Facebook | Twitter | Instagram</a><br><br>
+            </footer>
+</div>
+</div> 
