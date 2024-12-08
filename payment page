@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+<style>
+        
+    * Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.confirm-booking-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Section Headings */
+h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.25rem;
+}
+
+/* Ride Details Table */
+.ride-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.ride-details th, .ride-details td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.ride-details th {
+    background-color: #f3f3f3;
+    color: #333;
+    font-weight: bold;
+}
+
+.ride-details td {
+    color: #555;
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option-item label, .option-item p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.option-item input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Radio Buttons and Select Box */
+.option-item input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.option-item select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Proceed Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.proceed-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration:none ;
+}
+
+.proceed-button:hover {
+    background-color: #45a049;
+}
+</style>
+    
+
+
+</head>
+<body>
+    <div class="confirm-booking-container">
+        <!-- Ride Details Section -->
+        <section class="ride-details">
+            <h2>Ride Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source - Destination</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Fare</th>
+                        <th>Distance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hyderabad - Vishakhapatnam</td>
+                        <td>10:00 AM - 2:00 PM</td>
+                        <td>14-11-2024</td>
+                        <td>₹500</td>
+                        <td>215 km</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Options Section -->
+        <section class="options">
+            <h2>Options</h2>
+
+            <!-- Receive Notifications -->
+            <div class="option-item">
+                <p>Receive Notifications?</p>
+                <label>
+                    <input type="radio" name="notifications" value="yes">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="notifications" value="no">
+                    No
+                </label>
+            </div>
+
+            <!-- Choose Payment Option -->
+            <div class="option-item">
+                <label for="payment">Choose Payment Option:</label>
+                <select id="payment" name="payment">
+                    <option value="">-- Select --</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="cash">Cash</option>
+                </select>
+            </div>
+
+            <!-- Credit Card Details -->
+            <div id="credit-card-details" style="display: none;">
+                <h3>Enter Credit Card Details</h3>
+                <label for="credit-card-number">Card Number:</label>
+                <input type="text" id="credit-card-number" name="credit-card-number" placeholder="1234 5678 9012 3456">
+                <label for="credit-expiry-date">Expiry Date:</label>
+                <input type="month" id="credit-expiry-date" name="credit-expiry-date">
+                <label for="credit-cvv">CVV:</label>
+                <input type="password" id="credit-cvv" name="credit-cvv" placeholder="123">
+            </div>
+
+            <!-- Debit Card Details -->
+            <div id="debit-card-details" style="display: none;">
+                <h3>Enter Debit Card Details</h3>
+                <label for="debit-card-number">Card Number:</label>
+                <input type="text" id="debit-card-number" name="debit-card-number" placeholder="1234 5678 9012 3456">
+                <label for="debit-expiry-date">Expiry Date:</label>
+                <input type="month" id="debit-expiry-date" name="debit-expiry-date">
+                <label for="debit-cvv">CVV:</label>
+                <input type="password" id="debit-cvv" name="debit-cvv" placeholder="123">
+            </div>
+
+            <!-- UPI ID -->
+            <div id="upi-details" style="display: none;">
+                <h3>Enter UPI ID</h3>
+                <label for="upi-id">UPI ID:</label>
+                <input type="text" id="upi-id" name="upi-id" placeholder="example@upi">
+            </div>
+
+            <!-- Include Tip -->
+            <div class="option-item">
+                <p>Include Tip:</p>
+                <label>
+                    <input type="radio" name="tip" value="10"> ₹10
+                </label>
+                <label>
+                    <input type="radio" name="tip" value="20"> ₹20
+                </label>
+                <label>
+                    <input type="radio" name="tip" value="30"> ₹30
+                </label>
+            </div>
+
+            <!-- Secondary Email -->
+            <div class="option-item">
+                <label for="secondary-email">Secondary Email:</label>
+                <input type="email" id="secondary-email" name="secondary-email" placeholder="example@example.com">
+            </div>
+        </section>
+
+        <!-- Proceed Button -->
+        <div class="button-container">
+            <a href="ridedetails.html" class="proceed-button" id="proceed-button">Proceed</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Code
+        document.getElementById('payment').addEventListener('change', function(event) {
+            const paymentOption = event.target.value;
+
+            // Get all payment details sections
+            const creditCardDetails = document.getElementById('credit-card-details');
+            const debitCardDetails = document.getElementById('debit-card-details');
+            const upiDetails = document.getElementById('upi-details');
+
+            // Hide all sections initially
+            creditCardDetails.style.display = 'none';
+            debitCardDetails.style.display = 'none';
+            upiDetails.style.display = 'none';
+
+            // Show the appropriate section based on the selected payment option
+            if (paymentOption === 'credit-card') {
+                creditCardDetails.style.display = 'block';
+            } else if (paymentOption === 'debit-card') {
+                debitCardDetails.style.display = 'block';
+            } else if (paymentOption === 'upi') {
+                upiDetails.style.display = 'block';
+            }
+        });
+
+        document.getElementById('proceed-button').addEventListener('click', function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Get inputs
+            const notifications = document.querySelector('input[name="notifications"]:checked');
+            const paymentOption = document.getElementById('payment').value;
+            const tip = document.querySelector('input[name="tip"]:checked');
+            const secondaryEmail = document.getElementById('secondary-email').value;
+
+            // Payment-specific inputs
+            const creditCardNumber = document.getElementById('credit-card-number').value;
+            const creditExpiryDate = document.getElementById('credit-expiry-date').value;
+            const creditCvv = document.getElementById('credit-cvv').value;
+
+            const debitCardNumber = document.getElementById('debit-card-number').value;
+            const debitExpiryDate = document.getElementById('debit-expiry-date').value;
+            const debitCvv = document.getElementById('debit-cvv').value;
+
+            const upiId = document.getElementById('upi-id').value;
+
+            // Validate inputs
+            if (!notifications) {
+                alert("Please select whether to receive notifications.");
+                return;
+            }
+
+            if (!paymentOption) {
+                alert("Please select a payment option.");
+                return;
+            }
+
+            if (paymentOption === 'credit-card' && (!creditCardNumber || !creditExpiryDate || !creditCvv)) {
+                alert("Please fill out all credit card details.");
+                return;
+            }
+
+            if (paymentOption === 'debit-card' && (!debitCardNumber || !debitExpiryDate || !debitCvv)) {
+                alert("Please fill out all debit card details.");
+                return;
+            }
+
+            if (paymentOption === 'upi' && !upiId) {
+                alert("Please enter a UPI ID.");
+                return;
+            }
+
+            if (!tip) {
+                alert("Please include a tip.");
+                return;
+            }
+
+            if (secondaryEmail && !validateEmail(secondaryEmail)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Proceed if all validations pass
+            alert("Booking confirmed. Redirecting to Ride Details...");
+            window.location.href = "ridedetails.html";
+        });
+
+        // Email validation function
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
+</body>
+</html>
